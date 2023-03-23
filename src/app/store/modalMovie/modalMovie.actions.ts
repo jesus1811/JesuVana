@@ -1,5 +1,5 @@
 import { createAction, props } from '@ngrx/store';
-import { ModalMovie } from './modal.model';
+import { ModalMovie } from 'src/app/model/ModalMovie.model';
 
 export const modalMovieChange = createAction(
   '[modalMovie] change',

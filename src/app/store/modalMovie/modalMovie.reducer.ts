@@ -1,7 +1,7 @@
 import { createReducer, on } from '@ngrx/store';
 import { modalMovieChange, modalMovieClose } from './modalMovie.actions';
-import { ModalMovie } from './modal.model';
 import { Episode } from 'src/app/model/Movie.model';
+import { ModalMovie } from 'src/app/model/ModalMovie.model';
 
 const initialState: ModalMovie = {
   isModal: false,

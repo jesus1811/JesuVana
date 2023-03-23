@@ -1,4 +1,4 @@
-import { Episode } from 'src/app/model/Movie.model';
+import { Episode } from "./Movie.model";
 
 export interface ModalMovie {
   isModal: boolean;

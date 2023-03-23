@@ -1,12 +1,6 @@
 import { Component } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-import { Store } from '@ngrx/store';
-import { Observable } from 'rxjs';
-import { AppState } from 'src/app/model/AppState.model';
-import { Episode, Movie } from 'src/app/model/Movie.model';
-import { ModalMovie } from 'src/app/store/modalMovie/modal.model';
-import { modalMovieChange } from 'src/app/store/modalMovie/modalMovie.actions';
-import { modalMovieSelector } from 'src/app/store/modalMovie/modalMovie.selector';
+import {  Movie } from 'src/app/model/Movie.model';
 import { movies } from 'src/app/_mock';
 
 @Component({

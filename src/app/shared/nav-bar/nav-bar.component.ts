@@ -11,4 +11,8 @@ export class NavBarComponent {
   redirectHome() {
     this.router.navigate([`/`]);
   }
+  redirectFavorites(){
+    this.router.navigate([`/favorites`]);
+
+  }
 }

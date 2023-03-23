@@ -8,7 +8,9 @@ import { AppState } from './model/AppState.model';
 import { StoreDevtoolsModule } from '@ngrx/store-devtools';
 import { HomeModule } from './modules/home/home.module';
 import { DetailModule } from './modules/detail/detail.module';
-import {  modalMovieReducer } from './store/modalMovie/modalMovie.reducer';
+import { modalMovieReducer } from './store/modalMovie/modalMovie.reducer';
+import { FavoritesModule } from './modules/favorites/favorites.module';
+import { favoritesReducer } from './store/favorites/favorites.reducer';
 @NgModule({
   declarations: [AppComponent],
   imports: [
@@ -17,8 +19,10 @@ import {  modalMovieReducer } from './store/modalMovie/modalMovie.reducer';
     HttpClientModule,
     HomeModule,
     DetailModule,
+    FavoritesModule,
     StoreModule.forRoot<AppState>({
       modalMovie: modalMovieReducer,
+      favorites: favoritesReducer,
     }),
     StoreDevtoolsModule.instrument({ maxAge: 25, logOnly: !isDevMode() }),
   ],

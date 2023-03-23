@@ -1,0 +1,12 @@
+<app-nav-bar></app-nav-bar>
+<main class="bg-dark-500 w-full min-h-screen">
+  <div class="content-app">
+    <h1 class="text-primary-500 text-subTitle">Favorites</h1>
+    <section class="mt-[20px] flex gap-4 flex-wrap">
+      <app-movie
+        *ngFor="let movie of favorites | async"
+        [movie]="movie"
+      ></app-movie>
+    </section>
+  </div>
+</main>
