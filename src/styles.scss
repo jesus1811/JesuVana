@@ -1,1 +1,7 @@
-/* You can add global styles to this file, and also import other style files */
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+
+.content-app {
+    @apply w-full max-w-[1125px] mx-auto px-4
+}

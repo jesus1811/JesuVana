@@ -1,0 +1,9 @@
+<app-nav-bar></app-nav-bar>
+<main class="w-full bg-dark-500 min-h-screen">
+  <div class="content-app">
+    <h2 class="text-subTitle text-primary-500">Series</h2>
+    <section class="mt-[20px] flex gap-4 flex-wrap">
+      <app-movie *ngFor="let movie of movies" [movie]="movie"></app-movie>
+    </section>
+  </div>
+</main>

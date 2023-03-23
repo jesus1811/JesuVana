@@ -1,0 +1,18 @@
+<div
+  class="fixed left-0 top-0 z-20 flex h-screen w-full items-center justify-center bg-dark-500 bg-opacity-[0.8]"
+  (click)="handleModalVideoClose()"
+  *ngIf="(modalMovie | async)?.isModal"
+>
+  <section class="bg-dark-500 p-3 w-full content-app">
+    <h2 class="text-primary-500 text-title text-center">
+      {{ (modalMovie | async)?.episode?.title }}
+    </h2>
+    <video
+      class="aspect-video w-full"
+      autoplay
+      controls
+      [src]="(modalMovie | async)?.episode?.movie"
+    ></video>
+  </section>
+</div>
+<p>modal-video works!</p>

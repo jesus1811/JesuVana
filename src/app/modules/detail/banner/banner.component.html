@@ -1,0 +1,41 @@
+<section class="w-full absolute left-0 top-[80px]  aspect-video flex place-items-center text-[0.8vw]">
+  <img
+    [src]="movie.image"
+    alt="{{ movie.title }}"
+    class="w-full aspect-video object-cover absolute left-0 top-0"
+  />
+  <div class="absolute flex flex-col justify-center items-start z-10 w-full">
+    <div class="content-app">
+      <div
+        class="w-full max-w-[30em] flex flex-col items-start bg-dark-300 p-[2em] rounded-[0.375em]"
+      >
+        <h2 class="text-primary-500 text-[3em] text-center w-full">
+          {{ movie.title }}
+        </h2>
+        <p class="text-white text-[1em]">{{ movie.description }}</p>
+        <div class="w-full flex justify-between items-center my-4">
+          <span
+            class="bg-transparent rounded-full w-full max-w-[6.25em] aspect-square border-primary-500 border-[0.225em] p-[1em] flex place-items-center"
+            title="añadir a favoritos"
+          >
+            <app-add
+              class="w-full max-w-[9.375em]"
+              [class]="'fill-primary-500 w-full h-auto aspect-square'"
+            ></app-add>
+          </span>
+          <span
+            class="bg-transparent rounded-full w-full aspect-square max-w-[6.25em] border-primary-500 border-[0.225em] p-[1em] flex place-items-center"
+            title="ver serie"
+          >
+            <app-play
+              class="w-full max-w-[9.375em]"
+              [class]="
+                'fill-primary-500 translate-x-[0.625em] w-full h-auto aspect-square'
+              "
+            ></app-play>
+          </span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

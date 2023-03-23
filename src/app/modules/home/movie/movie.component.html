@@ -1,0 +1,42 @@
+<article
+  class="w-full max-w-[250px] rounded-[8px] movie hover:scale-[1.3] transition-all"
+  
+>
+  <img
+    [src]="movie.image"
+    alt="{{ movie.title }}"
+    class="rounded-t-[8px] object-cover w-full aspect-video cursor-pointer"
+    (click)="redirectDetail()"
+  />
+  <div class="w-full flex flex-col rounded-b-[8px] bg-dark-300 p-5 gap-1">
+    <div class="w-full flex justify-between items-center">
+      <span
+        class="bg-transparent rounded-full border-primary-500 border-[2px] p-2 flex place-items-center"
+        title="añadir a favoritos"
+      >
+        <app-add
+          [class]="'fill-primary-500 w-full max-w-[20px] h-auto aspect-square'"
+        ></app-add>
+      </span>
+      <span
+        class="bg-transparent cursor-pointer rounded-full border-primary-500 border-[2px] p-2 flex place-items-center"
+        title="ver serie"
+        (click)="redirectDetail()"
+      >
+        <app-play
+          [class]="
+            'fill-primary-500 translate-x-[3px] w-full max-w-[20px] h-auto aspect-square'
+          "
+        ></app-play>
+      </span>
+    </div>
+    <h2 class="text-subTitle text-primary-500 text-center">
+      {{ movie.title }}
+    </h2>
+    <div class="w-full information hidden">
+      <p class="text-small text-white italic overflow-y-hidden h-[100px]">
+        {{ movie.description }}
+      </p>
+    </div>
+  </div>
+</article>

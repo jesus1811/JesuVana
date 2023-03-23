@@ -1,0 +1,32 @@
+<article
+  class="bg-dark-300 px-3 py-5 min-h-[150px] w-full rounded-[6px] gap-4 flex justify-center items-center"
+  (click)="handleChangeModalMovie()"
+>
+  <p class="text-white text-subTitle">{{ episode.number }}</p>
+  <div
+    class="w-full max-w-[150px] flex flex-col justify-center items-center video__container cursor-pointer"
+  >
+    <span class="rounded-full p-2 border-primary-500 border-[2px] play">
+      <app-play class="fill-primary-500 translate-x-[3px]"></app-play>
+    </span>
+    <img
+      [src]="episode.image"
+      alt="{{ episode.title }}"
+      class="w-full aspect-video video object-cover"
+    />
+  </div>
+
+  <div class="flex flex-col justify-center items-start">
+    <h2
+      class="text-primary-500 text-subTitle"
+    >
+      {{ episode.title }}
+    </h2>
+    <p class="text-xsmall text-white">
+      El episodio comienza presentando a Morty, un adolescente de 14 años que
+      vive con su familia en los suburbios de una ciudad sin nombre. Morty tiene
+      problemas en la escuela y en casa, y se siente aburrido e insatisfecho con
+      su vida.
+    </p>
+  </div>
+</article>

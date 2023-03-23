@@ -1,0 +1,16 @@
+<app-nav-bar></app-nav-bar>
+<main class="w-full bg-dark-500 min-h-screen">
+  <div class="content-app text-[1.1vw]">
+    <app-banner [movie]="movie" class=""></app-banner>
+    <div class="bg-dark-500 mt-[50.625em] pt-5">
+      <h2 class="text-title text-primary-500">Episodios</h2>
+      <section class="flex flex-col place-items-center gap-4 mt-2">
+        <app-episode
+          *ngFor="let episode of movie.episodes"
+          [episode]="episode"
+        ></app-episode>
+      </section>
+    </div>
+    <app-modal-video></app-modal-video>
+  </div>
+</main>

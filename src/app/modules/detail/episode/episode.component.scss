@@ -1,0 +1,8 @@
+.play {
+    display: none;
+    position: absolute;
+}
+
+.video__container:hover .play {
+    display: inline-block;
+}
